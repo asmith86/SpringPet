@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+          http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+          http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+">
+    
+	
+	<!--<bean id="person" class="springpet.Person">
+		<constructor-arg name="name" value="John Doe" />
+		<constructor-arg name="pet" ref="pet" />
+	</bean> 
+        <bean id="pet" class="springpet.Dog" >
+            <constructor-arg name="name" value="Fido" />
+            <constructor-arg name="age" value="2" />
+        </bean>-->
+        
+        <bean id="person" class="springpet.Person">
+		<property name="name" value="John Doe" />
+		<property name="pet" ref="pet" />
+	</bean> 
+        <bean id="pet" class="springpet.Cat" >
+            <property name="name" value="Fluffy" />
+            <property name="age" value="2" />
+        </bean>
+        
+        
+	<!-- Configure copier class using setter injection of components
+	<bean id="copier" class="spring1.Copier">
+		<property name="reader" ref="reader" />
+		<property name="writer" ref="writer" />
+	</bean> -->
+
+    
+	<!-- 
+            Configure components of Copier for injection. When you want to
+            make a change, change the class name.
+        -->
+        
+        
+	
+	<!--<bean id="writer" class="spring1.GuiWriter" />-->
+
+</beans>
